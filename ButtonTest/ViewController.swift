@@ -7,9 +7,7 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +15,6 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(gradientButton)
         setupConstreints()
-        
     }
     
     private let gradientButton: UIButton = {
@@ -26,7 +23,6 @@ class ViewController: UIViewController {
         button.clipsToBounds = true
         return button
     }()
-    
     
     func setupGradient() {
 
@@ -44,9 +40,8 @@ class ViewController: UIViewController {
         gradientButton.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         gradientButton.setTitle("Зарегистрироваться", for: .normal)
         gradientButton.titleLabel?.font = Constants.Fonts.sfProDisplayRegular14
-
-
     }
+    
     func setupConstreints() {
         
     gradientButton.translatesAutoresizingMaskIntoConstraints = false
@@ -56,9 +51,4 @@ class ViewController: UIViewController {
     gradientButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 649).isActive = true
         
     }
-    
 }
-
-
-
-    
